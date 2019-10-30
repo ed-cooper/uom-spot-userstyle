@@ -1,0 +1,122 @@
+@-moz-document url("https://studentnet.cs.manchester.ac.uk/me/spot/") {
+body {
+    background-color: #f3f3f3;
+    line-height: 0; /* Hide semi-colon behind the nav bar*/
+	padding: 0;
+}
+
+/* Top nav bar */
+
+nav.navbar {
+	line-height: initial;
+    padding: 10px;
+    background-color: #401a57 !important; /* The background-color was originally set using !important */
+    color: #ffffff;
+}
+
+nav.navbar li.nav-item.active {
+	font-size: 30px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+nav.navbar ul.navbar-nav {
+    background: none !important; /* The background-color was originally set using !important */
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+nav.navbar a.nav-link {
+    color: white !important;
+    text-transform: capitalize;
+    margin: 0 3px;
+    padding: 8px 10px !important;
+    border-radius: 3px;
+    transition: background-color 0.1s ease-in;
+}
+
+nav.navbar a.nav-link:hover {
+    background: #542073;
+}
+
+.dropdown-menu a.dropdown-item {
+    text-transform: capitalize;
+}
+
+/* Main body */
+
+div.container {
+	line-height: initial;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    color: #9a9a9a; /* The colour for the footer text (Not in it's own element) */
+}
+
+div.container > p {
+	display: none; /* Remove empty paragraphs that are used for spacing */
+}
+
+/* Results tables */
+
+table.cwk {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+table.cwk td, table.cwk th {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: #fdfdfd;
+    min-width: 118px; /* Get the mark/max heading back on 1 line */
+}
+
+table.cwk td.table-notlateFlag {
+    background: #fdfdfd; /* The mark cell seems to try and override the background colour */
+}
+
+table.cwk td.courseHeader {
+    background-color: #542073;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: none;
+    text-align: left;
+    padding: 15px;
+}
+
+table.cwk td.courseHeader > b { /* The course title uses a <b> tag, not a <h_> */
+	vertical-align: middle;
+}
+
+table.cwk td.courseHeader > a.btn.btn-primary {
+	float: right;
+    margin-left: 10px;
+    border: none;
+    text-transform: capitalize;
+    background-color: #66258c !important; /* The background-color was originally set using !important */
+    color: #e6e6e6 !important; /* The color was also originally set using !important*/
+    transition: background-color 0.1s ease-in;
+}
+
+table.cwk td.courseHeader > a.btn.btn-primary:hover {
+    background-color: #752aa0 !important; /* To override the background-color above */
+}
+
+
+table.cwk td.courseHeader > a.btn.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(171, 171, 171, 0.5); /* Focus outlines are implemented using the box-shadow */
+}
+
+table.cwk td.courseHeader > br, table.cwk td.courseHeader > p {
+    display: none; /* Remove line break in course headings, as well as the empty <p> */
+}
+
+table.cwk td.totalSoFar {
+    border: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #f9f9f9;
+    padding: 12px 20px;
+    text-align: justify;
+    color: #464646;
+}
+}
